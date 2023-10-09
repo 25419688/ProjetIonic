@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    
+    <ion-title  class="ion-text-center" >{{ selectedAnnonces.title }}</ion-title>
+    <ion-buttons slot="start"  class="ion-margin-start">
+      <ion-back-button defaultHref="/show-all-announce"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4" offset="1.5">
+          <div style="margin-top: 100px;">
+          <img [src]="selectedAnnonces.image" />
+        </div>
+        </ion-col>
+        <ion-col size="6" offset="0">
+          <div style="margin-top: 100px;">
+          <ion-label class="ion-margin-horizontal author"><ion-icon name="person-circle-outline"></ion-icon> {{ selectedAnnonces. author }}</ion-label><br>
+          <ion-label class="ion-margin-horizontal author"><ion-icon name="call-outline"></ion-icon> {{ selectedAnnonces. num }}</ion-label><br>
+          <ion-label class="ion-margin-horizontal author"><ion-icon name="location-outline"></ion-icon> {{ selectedAnnonces. adresse }}</ion-label><br>
+          <ion-label class="ion-margin-horizontal author"><ion-icon name="calendar-number-outline"></ion-icon>
+      {{ selectedAnnonces. date }}</ion-label><br>
+    <ion-label class="ion-margin-horizontal author"><ion-icon name="card-outline"></ion-icon>
+        {{ selectedAnnonces. price }}</ion-label><br>
+
+        <div class="rectangle-Description">
+        <ion-label class="ion-margin-horizontal author"><ion-icon name="chatbox-ellipses-outline"></ion-icon>
+          {{ selectedAnnonces. description }}</ion-label><br>
+        </div>
+        </div>
+        
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col size="11" offset="0.5">
+          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!-- <strong style="align-items: center;">  {{ selectedAnnonces.title }} </strong> -->
+    
+    </div>
+    
+
+
+    
+    
+ 
+</ion-content>

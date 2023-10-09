@@ -1,3 +1,16 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu contentId="main-content" side="start" menuId="menuId">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title class="ion-margin-start">Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Contenu du menu -->
+      <ion-menu-toggle auto-hide="false">
+        <app-menu></app-menu>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>

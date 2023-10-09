@@ -1,0 +1,67 @@
+.title {
+    font-size: 24px; /* Taille de la police pour le titre */
+    margin-left: 60px;
+  }
+  
+  .author {
+    font-size: 12px; /* Taille de la police pour l'auteur (plus petite) */
+    margin-top: 300px; /* Marge supérieure pour espacer le titre de l'auteur */
+    margin-left: 60px;
+    color: #3b3232;
+    font-style: italic;
+  }
+  .large-image {
+    width: 80px; /* Largeur souhaitée */
+    height: 70px; /* Hauteur souhaitée */
+    border-radius: 0; 
+    margin-right: 100px;
+    margin-left: 10px;
+    box-shadow: 0px 10px 10px rgba(207, 201, 201, 0.911);
+    
+  
+    
+  }
+  .description {
+    font-size: 16px; /* Taille de la police pour l'auteur (plus petite) */
+    margin-top: 5px; /* Marge supérieure pour espacer le titre de l'auteur */
+    margin-left: 360px;
+    color: rgb(96, 157, 167);
+  }
+  .rectangle-Description{
+    // width: 300px;
+    // height: 150px;
+    // background-color: rgb(218, 231, 231);
+    // margin-left: 50px;
+    // margin-top: 20px;
+    // border-radius: 10px; /* Rayon des coins pour créer l'effet arrondi */
+    // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Ombre portée avec des paramètres (horizontal, vertical, flou, couleur) */
+    width: 80%; /* Largeur en pourcentage de la largeur parente */
+    max-width: 400px; /* Largeur maximale en pixels */
+    height: 25vh; /* Hauteur en pourcentage de la hauteur de la vue */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 2vh auto; /* Marge verticale automatique pour le centrage horizontal */
+    padding: 10px; /* Espacement interne pour le contenu à l'intérieur du rectangle */
+    margin-left: 50px;
+    overflow: auto; 
+    display: flex;
+    flex-direction: column; /* Organiser le contenu en colonne */
+    align-items: flex-start; /* Aligner le contenu en haut */
+    // justify-content: center;
+    // align-items: center;
+  
+    justify-content: flex-start; /* Aligner le contenu en haut */
+  }
+  ion-icon {
+    font-size: 24px; /* Ajustez la taille de l'icône selon vos préférences */
+  }
+  .rectangle-Description ion-label {
+    font-size: 14px; /* Ajustez la taille de la police selon vos préférences */
+    // line-height: 2; /* Augmentation de la hauteur de ligne pour centrer le texte verticalement */
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+    
+  }

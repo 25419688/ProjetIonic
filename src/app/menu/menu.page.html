@@ -1,0 +1,54 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+<ion-content>
+  <ion-list>
+    <ion-item lines="none" class="ion-justify-content-center" >
+             <ion-buttons slot="start" class="ion-margin-start">
+               <ion-button (click)="goToHome()"  >
+                   <ion-icon name="home-outline" size="large"></ion-icon>
+                </ion-button>
+             </ion-buttons>
+    </ion-item>
+    <ion-item lines="none" class="ion-justify-content-center"  >
+         <ion-buttons slot="start" class="ion-margin-start">
+            <ion-button (click)="goToMenu()" >
+              <ion-icon name="person-outline" size="large"></ion-icon>
+            </ion-button>
+         </ion-buttons>
+    </ion-item>
+    <ion-item lines="none" class="ion-justify-content-center"  >
+      <ion-buttons slot="start" class="ion-margin-start">
+        <ion-button (click)="goToMenu()" >
+          <ion-icon name="settings-outline" size="large"></ion-icon>
+        </ion-button>
+     </ion-buttons>
+    </ion-item >
+    <ion-item lines="none" class="ion-justify-content-center" ><ion-buttons slot="start" class="ion-margin-start">
+      <ion-button (click)="goToMenu()" >
+        <ion-icon name="megaphone-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons></ion-item>
+    <ion-item lines="none" class="ion-justify-content-center" ><ion-buttons slot="start" class="ion-margin-start">
+      <ion-button (click)="goToMenu()" >
+        <ion-icon name="notifications-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons></ion-item>
+    <ion-item lines="none" class="ion-justify-content-center" ><ion-buttons slot="start" class="ion-margin-start">
+      <ion-button (click)="goToMenu()" >
+        <ion-icon name="key-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons></ion-item>
+    <!-- Ajoutez d'autres liens ici -->
+  </ion-list>
+</ion-content>

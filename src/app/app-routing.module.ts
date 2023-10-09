@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'show-all-announce',
+    loadChildren: () => import('./show-all-announce/show-all-announce.module').then( m => m.ShowAllAnnouncePageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'show-details-annonces/:id',
+    loadChildren: () => import('./show-details-annonces/show-details-annonces.module').then( m => m.ShowDetailsAnnoncesPageModule)
+  },
 ];
 
 @NgModule({
