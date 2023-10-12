@@ -1,0 +1,143 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>add-annonces</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">add-annonces</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Devdactic Notes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let annonce of notes" (click)="openNote(note)">
+      <ion-label>
+        {{ annonce.title }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addNote()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content> -->
+<!-- add-annonces.page.html -->
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title style="font-size: 24px; font-weight: bold; font-style: italic;" class="ion-text-center">Add Annonce</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<!-- <ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      Add a New Annonce
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Title</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.title" name="title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Title</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.user" name="title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Title</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.image" name="title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Title</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.description" name="title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Title</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.price" name="title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Title</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.phone" name="title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Title</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.adresse" name="title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Title</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.date" name="title"></ion-input>
+        </ion-item>
+       
+        <ion-button expand="full" (click)="addAnnonce()">Add Annonce</ion-button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content> -->
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title style="font-size: 24px; font-weight: bold; font-style: italic;" class="ion-text-center">Add Annonce</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      Add a New Annonce
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Title</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.title" name="title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">User</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.user" name="user"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Image</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.image" name="image"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Description</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.description" name="description"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Price</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.price" name="price"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Phone</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.phone" name="phone"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Address</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.adresse" name="adresse"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Date</ion-label>
+          <ion-input [(ngModel)]="newAnnonce.date" name="date"></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" (click)="addAnnonce()">Add Annonce</ion-button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+

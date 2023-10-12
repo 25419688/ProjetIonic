@@ -27,7 +27,7 @@
   <ion-list style="margin-top: 30px;">
     <ion-item  style="margin-top: 10px;" 
                 [routerLink]="['/show-details-annonces', annonce.id]"
-                 *ngFor="let annonce of  listannonceService">
+                 *ngFor="let annonce of  annonces">
                  <div>
       <ion-avatar>
         <ion-img [src]="annonce.image" class="large-image " ></ion-img>
@@ -36,7 +36,7 @@
       <div>
       <ion-label class="ion-margin-horizontal title" >{{ annonce.title }}</ion-label>
  
-      <ion-label class="ion-margin-horizontal author"><ion-icon name="person-circle-outline"></ion-icon> {{ annonce. author }}</ion-label>
+      <ion-label class="ion-margin-horizontal author"><ion-icon name="person-circle-outline"></ion-icon> {{ annonce. user }}</ion-label>
 
       <ion-label class="ion-margin-horizontal author description">{{ annonce.price }}</ion-label>
       </div>
