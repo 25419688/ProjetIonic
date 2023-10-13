@@ -14,6 +14,7 @@ export interface Annonce {
     adresse : string,
     date: string,
 }
+
 @Injectable({
   providedIn: 'root'
 })
@@ -30,7 +31,8 @@ export class service {
       'https://ionic-15b28-default-rtdb.firebaseio.com/annonces.json',
       newAnnonce
     );
+
+
   }
   
-
 }

@@ -22,10 +22,22 @@ const routes: Routes = [
   {
     path: 'show-details-annonces/:id',
     loadChildren: () => import('./show-details-annonces/show-details-annonces.module').then( m => m.ShowDetailsAnnoncesPageModule)
-  },  {
+  },
+  {
     path: 'add-annonce',
     loadChildren: () => import('./add-annonce/add-annonce.module').then( m => m.AddAnnoncePageModule)
   },
+
+  {
+    path: 'sign-up',
+    loadChildren: () => import('./sign-up/sign-up.module').then( m => m.SignUpPageModule)
+  },
+  {
+    path: 'sign-in',
+    loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
+  },
+];
+
 
 ];
 
