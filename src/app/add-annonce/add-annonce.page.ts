@@ -10,6 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class AddAnnoncePage implements OnInit {
 
   annonce: Annonce = {
+    id : null,
     title: '',
     user: '',
     image: '',
