@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { service, Annonce } from '../annonce-service.service';
+import { AnnonceService, Annonce } from '../annonce-service.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
@@ -20,7 +20,7 @@ export class AddAnnoncePage implements OnInit {
     date: '',
   };
 
-  constructor(private annonceService: service,
+  constructor(private annonceService: AnnonceService,
     private router: Router) {}
 
   ngOnInit() {}

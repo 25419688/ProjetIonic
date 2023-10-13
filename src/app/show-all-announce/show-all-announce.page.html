@@ -3,29 +3,21 @@
     <ion-title style="font-size: 24px; font-weight: bold; /* Texte en gras */
     font-style: italic; /* Texte en italique */
     "class="ion-text-center">Show Annonces</ion-title>
-    
-    
-    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   
   <ion-list style="margin-top: 30px;">
-    <ion-item  style="margin-top: 10px;" 
-                [routerLink]="['/show-details-annonces', annonce.id]"
-                 *ngFor="let annonce of  liste">
-                 <div>
-      <ion-avatar>
-        <ion-img [src]="annonce.image" class="large-image"></ion-img>
-      </ion-avatar>
-    </div>
+    <ion-item  style="margin-top: 10px;" [routerLink]="['/show-details-annonces', annonce.id]" *ngFor="let annonce of  liste">
+      <div>
+        <ion-avatar>
+          <ion-img [src]="annonce.image" class="large-image"></ion-img>
+        </ion-avatar>
+      </div>
       <div>
       <ion-label class="ion-margin-horizontal title" >{{ annonce.title }}</ion-label>
- 
       <ion-label class="ion-margin-horizontal author"><ion-icon name="person-circle-outline"></ion-icon> {{ annonce.user }}</ion-label>
-
-
       <ion-label class="ion-margin-horizontal author description">{{ annonce.price }}</ion-label>
       </div>
       <ion-buttons slot="end">
