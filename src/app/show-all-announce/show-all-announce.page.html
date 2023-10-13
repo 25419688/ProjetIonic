@@ -3,22 +3,9 @@
     <ion-title style="font-size: 24px; font-weight: bold; /* Texte en gras */
     font-style: italic; /* Texte en italique */
     "class="ion-text-center">Show Annonces</ion-title>
-    <ion-buttons slot="end">
-      <ion-button expand="block" (click)="toggleSearch()">
-        <ion-icon name="search-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-input [(ngModel)]="searchQuery" *ngIf="isSearchActive" (ionChange)="onSearchChange($event)" placeholder="Search"></ion-input>
-    <ion-buttons slot="end" *ngIf="isSearchActive">
-      <ion-button (click)="clearSearch()">
-        <ion-icon name="close-circle-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="start"  class="ion-margin-start">
-      <ion-button expand="block" (click)="openMenu()" class="ion-margin-start">
-        <ion-icon name="menu-outline" size="large"></ion-icon>
-      </ion-button> 
-    </ion-buttons>
+    
+    
+    
   </ion-toolbar>
 </ion-header>
 
@@ -27,16 +14,16 @@
   <ion-list style="margin-top: 30px;">
     <ion-item  style="margin-top: 10px;" 
                 [routerLink]="['/show-details-annonces', annonce.id]"
-                 *ngFor="let annonce of  listannonceService">
+                 *ngFor="let annonce of  liste">
                  <div>
       <ion-avatar>
-        <ion-img [src]="annonce.image" class="large-image " ></ion-img>
+        <ion-img [src]="annonce.image" class="large-image"></ion-img>
       </ion-avatar>
     </div>
       <div>
       <ion-label class="ion-margin-horizontal title" >{{ annonce.title }}</ion-label>
  
-      <ion-label class="ion-margin-horizontal author"><ion-icon name="person-circle-outline"></ion-icon> {{ annonce. author }}</ion-label>
+      <ion-label class="ion-margin-horizontal author"><ion-icon name="person-circle-outline"></ion-icon> {{ annonce.user }}</ion-label>
 
       <ion-label class="ion-margin-horizontal author description">{{ annonce.price }}</ion-label>
       </div>

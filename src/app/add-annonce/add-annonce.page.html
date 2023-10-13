@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Add Anonnce</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item lines="inset">
+      <ion-icon name="clipboard-outline" slot="start"></ion-icon>
+      <ion-label position="floating">Title</ion-label>
+      <ion-input type="text" [(ngModel)]="annonce.title"></ion-input>
+    </ion-item>
+
+    <ion-item lines="inset">
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-label position="floating">User</ion-label>
+      <ion-input type="text" [(ngModel)]="annonce.user"></ion-input>
+    </ion-item>
+
+    <ion-item lines="inset">
+      <ion-icon name="call-outline" slot="start"></ion-icon>
+      <ion-label position="floating">Phone</ion-label>
+      <ion-input type="text" [(ngModel)]="annonce.phone"></ion-input>
+    </ion-item>
+
+    <ion-item lines="inset">
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label position="floating">Address</ion-label>
+      <ion-input type="text" [(ngModel)]="annonce.adresse"></ion-input>
+    </ion-item>
+
+    <ion-item lines="inset">
+      <ion-icon name="calendar-outline" slot="start"></ion-icon>
+      <ion-label position="floating">Date</ion-label>
+      <ion-input type="text" [(ngModel)]="annonce.date"></ion-input>
+    </ion-item>
+
+    <ion-item lines="inset">
+      <ion-icon name="card-outline" slot="start"></ion-icon>
+      <ion-label position="floating">Price</ion-label>
+      <ion-input type="text" [(ngModel)]="annonce.price"></ion-input>
+    </ion-item>
+
+    <ion-item lines="inset">
+      <ion-icon name="chatbubble-ellipses-outline" slot="start"></ion-icon>
+      <ion-label position="floating">Description</ion-label>
+      <ion-input type="text" [(ngModel)]="annonce.description"></ion-input>
+    </ion-item>
+
+    <ion-item lines="inset">
+      <ion-icon name="image-outline" slot="start"></ion-icon>
+      <ion-label position="floating">Image</ion-label>
+      <ion-input type="text" [(ngModel)]="annonce.image"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" slot="start" (click)="addAnnonce(annonce)">
+      Add Annonce
+    </ion-button>
+  </ion-list>
+</ion-content>

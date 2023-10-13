@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'show-details-annonces/:id',
     loadChildren: () => import('./show-details-annonces/show-details-annonces.module').then( m => m.ShowDetailsAnnoncesPageModule)
+  },  {
+    path: 'add-annonce',
+    loadChildren: () => import('./add-annonce/add-annonce.module').then( m => m.AddAnnoncePageModule)
   },
+
 ];
 
 @NgModule({
