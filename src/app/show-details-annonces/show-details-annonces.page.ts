@@ -18,9 +18,9 @@ export class ShowDetailsAnnoncesPage implements OnInit {
     private router: Router
 
 
-  // ) { }
+ ) { }
 
-  // ngOnInit() {
+  ngOnInit() {
 
 
     // this.activatedRoute.paramMap.subscribe({
@@ -31,21 +31,21 @@ export class ShowDetailsAnnoncesPage implements OnInit {
     //     this.selectedAnnonces = this.annonceService.getAnnoncesById(id);
     //   },
     // });
-    this.activatedRoute.paramMap.subscribe({
-      next: (p: ParamMap) => {
-        let id = p.get('id');
-        if (id) {
-          // Si l'ID est passé en tant que paramètre, récupérez les détails de l'annonce
-          this.selectedAnnonces = this.annonceService.getAnnoncesById(id);
-        } else {
-          // Si aucun ID n'est passé, gérer le cas où l'ID est manquant
-          // Par exemple, rediriger l'utilisateur vers la page de liste des annonces
-          this.router.navigate(['/show-all-announce']);
-        }
-      },
-    });
+    // this.activatedRoute.paramMap.subscribe({
+    //   next: (p: ParamMap) => {
+    //     let id = p.get('id');
+    //     if (id) {
+    //       // Si l'ID est passé en tant que paramètre, récupérez les détails de l'annonce
+    //       this.selectedAnnonces = this.annonceService.getAnnoncesById(id);
+    //     } else {
+    //       // Si aucun ID n'est passé, gérer le cas où l'ID est manquant
+    //       // Par exemple, rediriger l'utilisateur vers la page de liste des annonces
+    //       this.router.navigate(['/show-all-announce']);
+    //     }
+    //   },
+    // });
 
 
-  // }
+  }
 
 }

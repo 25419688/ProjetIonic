@@ -18,7 +18,7 @@ export interface Annonce {
 @Injectable({
   providedIn: 'root'
 })
-export class service {
+export class AnnonceService {
 
   constructor(private http: HttpClient) {}
 
@@ -31,8 +31,12 @@ export class service {
       'https://ionic-15b28-default-rtdb.firebaseio.com/annonces.json',
       newAnnonce
     );
+  }
 
-
+  deleteAnnonce(idAnnonce) {
+    return this.http.delete(
+      'https://ionic-15b28-default-rtdb.firebaseio.com/annonces/${idAnnonce}.json'
+    );
   }
   
 }
