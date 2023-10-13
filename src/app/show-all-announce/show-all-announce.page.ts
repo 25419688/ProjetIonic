@@ -1,4 +1,8 @@
-// import { Component, OnInit } from '@angular/core';
+
+import { MenuController } from '@ionic/angular';
+import { service, Annonce } from '../annonce-service.service';
+
+
 import { ChangeDetectorRef, Component,OnInit } from '@angular/core';
 import { AlertController, MenuController, ModalController } from '@ionic/angular';
 // import { AnnonceServiceService } from '../annonce-service.service';
@@ -12,8 +16,30 @@ import { collection, getDocs, query } from 'firebase/firestore';
   styleUrls: ['./show-all-announce.page.scss'],
 })
 export class ShowAllAnnouncePage implements OnInit {
-  // listannonceService : any[]=[];
-  annonces: Annonce[] = [];
+
+
+  liste: Annonce[];
+  
+  constructor(private annonceService: service) { }
+  ngOnInit() {
+    this.getAnnonces();  }
+
+  getAnnonces() {
+    this.liste = [];
+    this.annonceService.getAllAnnonces  ().subscribe({
+      next: (response) => {
+        console.log(response);
+        for (const key in response) {
+          this.liste.push({ id: key, ...response[key] });
+        }
+        console.log(this.liste);
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+
+
 
   searchQuery: string = '';
   isSearchActive: boolean = false; 
@@ -41,19 +67,7 @@ export class ShowAllAnnouncePage implements OnInit {
   //   //   this.annonces = annonces;
   //   // });
   // }
-  async ngOnInit() {
-    const annoncesCollection = collection(this.annonceService.firestore, 'add-annonce');
-    const q = query(annoncesCollection);
-
-    try {
-      const querySnapshot = await getDocs(q);
-
-      querySnapshot.forEach((doc) => {
-        // Traitez les données, par exemple, ajoutez-les à votre tableau annonces
-        this.annonces.push(doc.data() as Annonce);
-      });
-    } catch (error) {
-      console.error('Erreur lors de la récupération des données Firestore:', error);
+  
     }
   }
   // async ngOnInit() {
@@ -107,7 +121,7 @@ export class ShowAllAnnouncePage implements OnInit {
     annonce.user.toLowerCase().includes(searchTerm) ||
     annonce.description.toLowerCase().includes(searchTerm)
   );
+
   }
-
-
+  
 }

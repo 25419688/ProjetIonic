@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-// import { AnnonceServiceService } from '../annonce-service.service';
+
 import { AnnonceService } from '../annonce-service.service';
+
 
 @Component({
   selector: 'app-show-details-annonces',
   templateUrl: './show-details-annonces.page.html',
   styleUrls: ['./show-details-annonces.page.scss'],
 })
+
 export class ShowDetailsAnnoncesPage implements OnInit {
   selectedAnnonces;
   constructor(
@@ -15,9 +17,11 @@ export class ShowDetailsAnnoncesPage implements OnInit {
     private annonceService: AnnonceService ,
     private router: Router
 
-  ) { }
 
-  ngOnInit() {
+  // ) { }
+
+  // ngOnInit() {
+
 
     // this.activatedRoute.paramMap.subscribe({
     //   next: (p: ParamMap) => {
@@ -41,6 +45,7 @@ export class ShowDetailsAnnoncesPage implements OnInit {
       },
     });
 
-  }
+
+  // }
 
 }

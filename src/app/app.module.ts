@@ -13,14 +13,16 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 
+import { environment } from '../environments/environment';
+
+import { HttpClientModule } from '@angular/common/http';
 
 // C:\Users\Administrateur\Desktop\Glsii3A\Ionic\ProjetIonic\projet\src\app\menu
 
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule ,MenuPageModule,provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    provideFirestore(() => getFirestore())],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule ,MenuPageModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
