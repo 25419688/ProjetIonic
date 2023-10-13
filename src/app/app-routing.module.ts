@@ -31,10 +31,10 @@ const routes: Routes = [
     path: 'sign-in',
     loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
   },
-  {
-    path: 'add-annonces',
-    loadChildren: () => import('./add-annonces/add-annonces.module').then( m => m.AddAnnoncesPageModule)
-  },
+  // {
+  //   path: 'add-annonces',
+  //   loadChildren: () => import('./add-annonces/add-annonces.module').then( m => m.AddAnnoncesPageModule)
+  // },
 ];
 
 @NgModule({

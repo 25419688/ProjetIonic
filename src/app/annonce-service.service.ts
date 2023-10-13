@@ -83,7 +83,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { collection, collectionData, doc, docData, addDoc, Firestore, DocumentData, CollectionReference } from '@angular/fire/firestore';
-
+// import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore/';
 
 export interface Annonce {
  
