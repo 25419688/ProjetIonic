@@ -6,7 +6,7 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ombre portée */
     margin: 0 auto; /* Centrage horizontal du rectangle */
     // margin-left: 800px;
-    margin-left: -450px;
+    margin-left: 100px;
     margin-top: 50px;
     // background-color: #fbfaf1;
     background-color: #ffffff;
@@ -14,7 +14,7 @@
     // margin-top: 100px; /* Marge depuis le haut pour le centrer verticalement */
   }
   .content{
-    background-image: url('https://planning-cloud.be/wp-content/uploads/2021/09/annonces.png');
+    
     background-color: ffffff;
     background-size: cover; /* Redimensionner l'image pour couvrir toute la page */
     background-repeat: no-repeat; /* Éviter la répétition de l'image */
@@ -120,4 +120,17 @@
   /* Styles CSS pour changer la couleur des icônes au survol (optionnel) */
   ion-icon:hover {
     color: #f24c6c; /* Nouvelle couleur de l'icône au survol */
+  }
+
+  .button {
+    margin-top: 50px;
+  }
+
+  .image {
+    width: 100%;  /* ou une taille fixe en pixels ou em */
+  height: 150px;
+  }
+
+  ion-card {
+    height: 100%; /* ou une hauteur fixe en pixels ou em */
   }
