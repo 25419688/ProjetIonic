@@ -58,7 +58,8 @@ export class ShowAllAnnouncePage implements OnInit {
           handler: () => {
             this.annonceService.deleteAnnonce(idAnnonce).subscribe({
               next: (response) => {
-                this.getAnnonces();
+                console.log(response);
+                this.getAnnonces;
               },
               error: (err) => {
                 console.log(err);

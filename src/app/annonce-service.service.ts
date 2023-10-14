@@ -26,6 +26,10 @@ export class AnnonceService {
     return this.http.get('https://ionic-15b28-default-rtdb.firebaseio.com/annonces.json');
   }
 
+  getAnnonceById(id) {
+    return this.http.get(`https://ionic-15b28-default-rtdb.firebaseio.com/annonces/${id}.json`);
+  }
+
   addAnnonce(newAnnonce) {
     return this.http.post(
       'https://ionic-15b28-default-rtdb.firebaseio.com/annonces.json',
@@ -35,7 +39,7 @@ export class AnnonceService {
 
   deleteAnnonce(idAnnonce) {
     return this.http.delete(
-      'https://ionic-15b28-default-rtdb.firebaseio.com/annonces/${idAnnonce}.json'
+      `https://ionic-15b28-default-rtdb.firebaseio.com/annonces/${idAnnonce}.json`
     );
   }
   
