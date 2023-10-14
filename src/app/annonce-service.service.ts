@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 
 export interface Annonce {
- 
+
     id?: string;
     title: string;
     user: string;
@@ -38,5 +38,5 @@ export class AnnonceService {
       'https://ionic-15b28-default-rtdb.firebaseio.com/annonces/${idAnnonce}.json'
     );
   }
-  
+
 }

@@ -1,133 +1,38 @@
-.rectangle {
-    width: 350px; /* Largeur du rectangle */
-    height: 550px; /* Hauteur du rectangle */
-    background-color: #ffffff; /* Couleur de fond du rectangle */
-    border-radius: 10px; /* Rayon de l'arrondi des coins */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ombre portée */
-    // margin: 0 auto; /* Centrage horizontal du rectangle */
-    margin-left: -450px;
-    margin-top: 50px;
-    // background-color: #fbfaf1;
-    background-color: #ffffff;
- 
-    // margin-top: 100px; /* Marge depuis le haut pour le centrer verticalement */
+.bg-img {
+  padding: 1px;
+  height: 100vh;
+  background-image: url("../../assets/images/bg.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  --ion-background-color: transparent;
+  width: 60%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+ion-card-title
+{
+  margin-top: 30px;
+  font-size: 40px;
+  color:#E8ADAA;
+  text-align: center;
+  font-weight: 600;
+}
+.wrapform
+{
+  margin-top: 30px;
+}
+.sign-btn-wrap{
+  text-align: center;
+  padding-top: 30px;
+  .sign-btn{
+    //--ion-primary-color: #01F9C6 !important;
+    color: #E8ADAA;
+    font-size: 20px;
   }
-  .content{
-    background-image: url('https://planning-cloud.be/wp-content/uploads/2021/09/annonces.png');
-    background-color: ffffff;
-    background-size: cover; /* Redimensionner l'image pour couvrir toute la page */
-    background-repeat: no-repeat; /* Éviter la répétition de l'image */
-    // background-position: center center; /* Centrer l'image horizontalement et verticalement */
-    background-size: 90%; /* Réduire la taille de l'image à 50% */
-    margin-left: 500px;
-    /* Vous pouvez ajouter d'autres styles personnalisés ici */
-    // background-color: #fbfaf1;
-  }
-  .image-container {
-    flex: 10; /* Occupe une partie flexible de l'espace disponible */
-    // margin-right: 70px; /* Marge à droite pour séparer de la zone de texte */
-   
-    /* Vous pouvez ajuster la largeur de l'image en modifiant la valeur de flex */
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: 2fr 2fr; /* Deux colonnes égales */
-    gap: 10px; /* Espacement entre les éléments */
-    // align-items: center; /* Centrer verticalement */
-    justify-items: start; /* Aligner les éléments à gauche dans les colonnes */
-    padding: 20px;
-    justify-content: center; /* Centrer horizontalement */
-  }
-  
-  .image-container img {
-    max-width: 300%; /* Ajuster la largeur de l'image */
-    height: auto;
-    margin-left: 40px;
-  }
-//   ion-input {
-//     --border-radius: 10px; /* Rayon de l'arrondi des coins */
-    
-//     --border-radius: 10px; /* Rayon de l'arrondi des coins */
-//     --padding-start: 16px; /* Espacement à gauche */
-//     --padding-end: 16px; /* Espacement à droite */
-    
-//   }
-  .rounded-input {
-    border-radius: 20px; /* Arrondir les coins */
-    padding: 10px 15px; /* Ajouter de l'espace intérieur (10px en haut/bas, 15px à gauche/droite) */
-    border: 1px solid #ccc; /* Facultatif : Ajouter une bordure pour plus de style */
-    width: 100%; /* Ajuster la largeur à 100% pour occuper toute la largeur disponible */
-    font-size: 16px; /* Facultatif : Définir la taille de la police */
-  }
-  ion-item, ion-input, ion-button {
-    --ion-background-color: transparent; /* Définir la couleur de fond sur transparent */
-  }
-  .centered-icon {
-    display: flex;
-    align-items: center; /* Centrer verticalement */
-    justify-content: center; /* Centrer horizontalement */
-  }
-  .input-item {
-    margin-bottom: 10px; /* Espacement vertical entre les éléments d'entrée */
-  }
-//   .input-item .input-placeholder {
-//     text-align: center;
-//     padding-left: 40px;
-//   }
-.input-item .input-wrapper::after {
-    content: attr(placeholder);
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    opacity: 0.7; /* Ajustez l'opacité selon vos préférences */
-    color: #999; /* Couleur du texte du placeholder */
-  }
-  .custom-button {
-    margin-top: 100px; /* Ajustez la marge supérieure selon vos préférences */
-    background-color: #62c7d0; /* Couleur de fond du bouton */
-    color: #fff; /* Couleur du texte du bouton */
-    font-size: 16px; /* Taille de la police du bouton */
-    border-radius: 10px; /* Rayon de l'arrondi des coins du bouton */
-    padding: 10px; /* Espacement interne du bouton (ajustez selon vos besoins) */
-    text-transform: uppercase; /* Convertir le texte en majuscules (optionnel) */
-    font-weight: bold; /* Texte en gras (optionnel) */
-    margin-left: 90px;
-  }
-  .custom-button:hover {
-    background-color: #62c7d0; /* Couleur de fond du bouton au survol */
-  }
-  .icon-row {
-    display: flex;
-    justify-content: space-between; /* Espacement égal entre les icônes */
-    align-items: center; /* Alignement vertical au centre */
-    margin-top: 80px; /* Ajustez la marge supérieure selon vos préférences */
-    margin-left: 50px;
-  }
-  
-  /* Styles CSS pour ajuster la taille des icônes (ajustez selon vos besoins) */
-  ion-icon {
-    font-size: 20px; /* Taille de l'icône */
-    color: #615555; /* Couleur de l'icône */
-  }
-  
-  /* Styles CSS pour changer la couleur des icônes au survol (optionnel) */
-  ion-icon:hover {
-    color: #f24c6c; /* Nouvelle couleur de l'icône au survol */
-  }
-  .clickable-h2 {
-    margin-bottom: 60px;
-    margin-left: 50px;
-    padding-top: 20px;
-    font-style: italic;
-    font-weight: bold;
-    color: #62c7d0;
-    cursor: pointer; /* Curseur de type main lors du survol */
-  }
-  
-  .clicked {
-    background-color: #ccc; /* Couleur de fond au clic */
-  }
-  
+}

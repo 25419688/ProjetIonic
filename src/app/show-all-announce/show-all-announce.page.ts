@@ -16,14 +16,13 @@ export class ShowAllAnnouncePage implements OnInit {
   liste: Annonce[];
   searchQuery: string = '';
   isSearchActive: boolean = false;
-  
+
   constructor(
-    private annonceService: AnnonceService, 
+    private annonceService: AnnonceService,
     private alertController: AlertController,
     private menuController: MenuController,
-    private router : Router ,
     private cd: ChangeDetectorRef,
-  private alertCtrl: AlertController, 
+  private alertCtrl: AlertController,
   private modalCtrl: ModalController) {}
 
 
@@ -72,7 +71,7 @@ export class ShowAllAnnouncePage implements OnInit {
     await alert.present();
   }
 
- 
+
 
 
   openMenu() {
@@ -105,5 +104,5 @@ export class ShowAllAnnouncePage implements OnInit {
   );
 
   }
-  
+
 }

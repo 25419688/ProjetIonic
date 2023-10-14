@@ -1,100 +1,29 @@
-<!-- <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>sign-in</ion-title>
-  </ion-toolbar>
+<ion-header [translucent]="true">
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">sign-in</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content> -->
-
-
-<!-- <ion-content [fullscreen]="true" class="background-image">
-  
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">sign-up</ion-title>
-    </ion-toolbar>
-  </ion-header> 
-</ion-content> -->
-<!-- <ion-header [translucent]="true">
-  <ion-toolbar color="secondary">
-    
-    <ion-title  class="ion-text-center" ></ion-title>
-   
-  </ion-toolbar>
-</ion-header> -->
-<!-- <ion-content [fullscreen]="true">
-  <div class="content">
-  <div class="image-container">
-      <img src="https://th.bing.com/th/id/R.d046100b5b913adda48f918eb19195cc?rik=5W2Hrn6iKqNeAA&riu=http%3a%2f%2fhq-wallpapers.ru%2fwallpapers%2f10%2fhq-wallpapers_ru_abstraction3d_49198_1920x1080.jpg&ehk=w%2fB7mdeFkPBlGei1ht8TD1NgzttmO6Vo7uG3sZuQRig%3d&risl=&pid=ImgRaw&r=0" alt="Votre Image">
-      <div  class="rectangle">
-      </div>
-  </div>
-  
-</div>
- 
-</ion-content> -->
-<ion-content [fullscreen]="true">
-  <div class="content">
-    
-    <div class="rectangle">
-      <!-- Contenu de votre rectangle ici -->
-      <!-- <div style="display: flex; align-items: center;"> -->
-      <h2  id="h2-1" class="clickable-h2" style="align-items: center ;margin-bottom: 50px;margin-left: 110px; padding-top: 20px;font-style: italic; 
-      font-weight: bold; color: #62c7d0;">Sign In</h2>
-      <!-- <h2 id="h2-2" class="clickable-h2" style="align-items: center ;margin-bottom: 60px;margin-left: 60px; padding-top: 20px;font-style: italic; 
-      font-weight: bold; color: #62c7d0;">Sign Up</h2> -->
-      <!-- <h2 *ngFor="let h2 of ['Sign In 1', 'Sign In 2']; let i = index"
-      (click)="handleClick(i)"
-      [ngClass]="{'clicked': i === clickedH2Index}">
-       {{ h2 }}
-  </h2> -->
-  <!-- <div class="clickable-h2" [ngClass]="{'clicked': selected === 1}" (click)="handleClick(1)">Sign In 1</div>
-  <div class="clickable-h2" [ngClass]="{'clicked': selected === 2}" (click)="handleClick(2)">Sign In 2</div> -->
-      <!-- </div> -->
-  <form >
-    <ion-item  class="input-item">
-      <!-- <ion-label ><ion-icon name="person-circle-outline" class="centered-icon"></ion-icon></ion-label> -->
-      <!-- <ion-input type="text" required class="rounded-input" placeholder="   your name"></ion-input>
-    </ion-item>
-    <ion-item  class="input-item"> -->
-      <!-- <ion-label ><ion-icon name="person-circle-outline" class="centered-icon"></ion-icon></ion-label> -->
-      <ion-input type="text" required class="rounded-input" placeholder="   your Email"></ion-input>
-    </ion-item>
-    <ion-item  class="input-item">
-      <!-- <ion-label position="floating" style="padding-left: 10px;">Mot de passe</ion-label> -->
-      <ion-input type="password" required required class="rounded-input" placeholder="   your Password"></ion-input>
-    </ion-item>
-    <!-- <ion-item  class="input-item">
-     <ion-label position="floating" style="padding-left: 10px;">Mot de passe</ion-label> 
-      <ion-input type="password" required required class="rounded-input" placeholder="   confirm your Password"></ion-input>
-    </ion-item> -->
-    <ion-button  type="submit" class="custom-button"  >Connect</ion-button>
-  </form>
-  <ion-row class="icon-row">
-    <ion-col size="4" >
-      <ion-icon name="logo-google"></ion-icon>
-
-    </ion-col>
-    <ion-col size="4">
-      <ion-icon name="logo-facebook"></ion-icon>
-    </ion-col>
-    <ion-col size="4">
-      <ion-icon name="logo-twitter"></ion-icon>
-    </ion-col>
-  </ion-row>
-    </div>
-    <div class="grid-container">
-      <!-- <div class="image-container">
-        <img src="https://image.freepik.com/vecteurs-libre/annonce-annonce-fond_118124-331.jpg" alt="Votre Image">
-      </div> -->
-     
+  <div class="bg-img">
+    <div class="card-container">
+      <ion-card>
+        <ion-card-title >Sign In</ion-card-title>
+        <ion-card-content>
+          <div class="wrapform">
+            <ion-item>
+              <ion-icon class="ion-padding" name="mail-outline"></ion-icon>
+              <ion-input type="text" name="email" placeholder="Email" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-icon class="ion-padding" name="lock-closed-outline"></ion-icon>
+              <ion-input type="password" name="password" placeholder="*********" required></ion-input>
+            </ion-item>
+          </div>
+          <div class="sign-btn-wrap">
+              <ion-button fill="solid" shape="round" color="#FFE5B4" class="sign-btn" (click)="signIn()">Signin</ion-button>
+              <ion-button fill="solid" shape="round" color="#FFE5B4" class="sign-btn" >Signup</ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
     </div>
   </div>
-
 </ion-content>

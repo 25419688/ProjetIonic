@@ -1,45 +1,42 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+
 <ion-content [fullscreen]="true">
-  <div class="content">
-    
-    <div class="rectangle">
-      <h2 style="align-items: center ;margin-bottom: 50px;margin-left: 110px; padding-top: 20px;font-style: italic; font-weight: bold; color: lightcoral;">Sign Up</h2>
-  <form >
-    <ion-item  class="input-item">
-      <ion-label position="floating">Name</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
+  <div class="bg-img">
+    <div class="card-container">
+      <ion-card>
 
-    <ion-item  class="input-item">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="email" required></ion-input>
-    </ion-item>
-    
-    <ion-item  class="input-item">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
-    </ion-item>
-
-    <ion-item  class="input-item">
-      <ion-label position="floating">Confirm your Password</ion-label>
-      <ion-input type="password" required></ion-input>
-    </ion-item>
-    
-    
-    <ion-button class="button" type="submit" expand="full">Register</ion-button>
-  </form>
-  <ion-row class="icon-row">
-    <ion-col size="4" >
-      <ion-icon name="logo-google"></ion-icon>
-
-    </ion-col>
-    <ion-col size="4">
-      <ion-icon name="logo-facebook"></ion-icon>
-    </ion-col>
-    <ion-col size="4">
-      <ion-icon name="logo-twitter"></ion-icon>
-    </ion-col>
-  </ion-row>
+        <ion-card-title >Sign Up</ion-card-title>
+        <ion-card-content>
+          <div class="wrapform">
+            <ion-item>
+              <ion-icon class="ion-padding" name="person-outline"></ion-icon>
+              <ion-input type="text" name="name" placeholder="Name" [(ngModel)]= "user.name" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-icon class="ion-padding" name="mail-outline"></ion-icon>
+              <ion-input type="text" name="email" placeholder="Email" [(ngModel)]= "user.email" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-icon class="ion-padding" name="call-outline"></ion-icon>
+              <ion-input type="text" name="phone" placeholder="Phone Number"[(ngModel)]= "user.phone" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-icon class="ion-padding" name="image-outline"></ion-icon>
+              <ion-input type="text" name="image" placeholder="Image" [(ngModel)]= "user.image" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-icon class="ion-padding" name="lock-closed-outline"></ion-icon>
+              <ion-input type="password" name="password" placeholder="*********" [(ngModel)]= "user.password" required></ion-input>
+            </ion-item>
+          </div>
+          <div class="sign-btn-wrap">
+              <ion-button fill="solid" shape="round" color="#FFE5B4" class="sign-btn">Signin</ion-button>
+              <ion-button fill="solid" shape="round" color="#FFE5B4" class="sign-btn" (click)="addUser(user)" >Signup</ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
     </div>
   </div>
-
 </ion-content>
