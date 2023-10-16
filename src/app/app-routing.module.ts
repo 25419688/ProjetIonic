@@ -36,6 +36,11 @@ const routes: Routes = [
     path: 'sign-in',
     loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
   },
+  {
+    path: 'edit-annonces/:id',
+    loadChildren: () => import('./edit-annonces/edit-annonces.module').then( m => m.EditAnnoncesPageModule)
+  },
+
 ];
 
 

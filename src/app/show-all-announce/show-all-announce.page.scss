@@ -27,3 +27,15 @@
     margin-left: 60px;
     color: rgb(96, 157, 167);
   }
+  .small-icon {
+    font-size: 16px; /* Ajustez la taille comme vous le souhaitez */
+  }
+
+  .transparent-button {
+    background-color: transparent !important; /* Fond transparent */
+    border: none !important; /* Pas de bordure */
+    width: 50px;
+    height: 10px;
+    /* Couleur du texte */
+    /* Autres styles personnalisés */
+  }
