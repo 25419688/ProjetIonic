@@ -11,7 +11,7 @@ import { UserService, User } from '../user.service';
 export class SignUpPage implements OnInit {
 
   user: User= {
-    id: '',
+    
     name: '',
     email: '',
     phone: '',
@@ -21,25 +21,17 @@ export class SignUpPage implements OnInit {
 
   constructor(private userService: UserService, private router: Router) { }
 
-
-  addUser(newUser) {
-    this.userService.addUser(newUser).subscribe({
-      next: (response) => {
-        console.log(response);
+  signUp() {
+    this.userService.signUp(this.user.email, this.user.password)
+      .then((response) => {
+        console.log('Successfully signed up!', response);
         this.router.navigate(['/sign-in']);
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
-
+      })
+      .catch((error) => {
+        console.error('Error while signing up', error);
+      });
   }
 
   ngOnInit() {
   }
-  itemTapped(event: any, annonce: any) {
-    // Gérez ici ce qui doit se produire lorsque l'élément est cliqué
-  }
-
-
 }

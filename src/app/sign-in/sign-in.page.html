@@ -11,16 +11,16 @@
           <div class="wrapform">
             <ion-item>
               <ion-icon class="ion-padding" name="mail-outline"></ion-icon>
-              <ion-input type="text" name="email" placeholder="Email" required></ion-input>
+              <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>
             </ion-item>
             <ion-item>
               <ion-icon class="ion-padding" name="lock-closed-outline"></ion-icon>
-              <ion-input type="password" name="password" placeholder="*********" required></ion-input>
+              <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>
             </ion-item>
           </div>
           <div class="sign-btn-wrap">
-              <ion-button fill="solid" shape="round" color="#FFE5B4" class="sign-btn" (click)="signIn()">Signin</ion-button>
-              <ion-button fill="solid" shape="round" color="#FFE5B4" class="sign-btn" >Signup</ion-button>
+            <ion-button fill="solid" shape="round" color="#FFE5B4" class="sign-btn" (click)="signIn()">Sign In</ion-button>
+            <ion-button fill="solid" shape="round" color="#FFE5B4" class="sign-btn" >Signup</ion-button>
           </div>
         </ion-card-content>
       </ion-card>
