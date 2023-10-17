@@ -25,16 +25,12 @@ export class AddAnnoncePage implements OnInit {
   constructor(private annonceService: AnnonceService,
     private router: Router,
     private userService : UserService) {}
-
+    token= this.userService.getToken();
   ngOnInit() {
   }
-  
+
   addAnnonce(newAnnonce) {
-    const token = this.userService.getToken();
-    const tokenPayload = this.decodeToken(token);
-    console.log('Decoded Token Payload:', tokenPayload);
-    const userId = tokenPayload.user_id;
-    console.log('User ID:', userId);
+    const userId= this.userService.getUserData(this.token);
     newAnnonce.user = userId;
     this.annonceService.addAnnonce(newAnnonce).subscribe({
       next: (response) => {
@@ -47,12 +43,5 @@ export class AddAnnoncePage implements OnInit {
     });
   }
 
-  private decodeToken(token: string): any {
-    const tokenParts = token.split('.');
-    if (tokenParts.length === 3) {
-      const payload = tokenParts[1];
-      return JSON.parse(atob(payload));
-    }
-    return null;
-  }
+  
 }
