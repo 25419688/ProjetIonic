@@ -8,29 +8,21 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item lines="inset">
-      <ion-icon name="clipboard-outline" slot="start"></ion-icon>
-      <ion-label position="floating">Title</ion-label>
-      <ion-input type="text" [(ngModel)]="annonce.title"></ion-input>
+  <div class="wrapform"> 
+
+     <ion-item>
+      <ion-icon class="ion-padding" name="home-outline"></ion-icon>
+      <ion-input  placeholder="Title" type="text" [(ngModel)]="annonce.title"></ion-input>
     </ion-item>
 
-    <ion-item lines="inset">
-      <ion-icon name="person-outline" slot="start"></ion-icon>
-      <ion-label position="floating">User</ion-label>
-      <ion-input type="text" [(ngModel)]="annonce.user"></ion-input>
+    <ion-item>
+      <ion-icon class="ion-padding" name="call-outline"></ion-icon>
+      <ion-input  placeholder="Phone" type="text" [(ngModel)]="annonce.phone"></ion-input>
     </ion-item>
 
-    <ion-item lines="inset">
-      <ion-icon name="call-outline" slot="start"></ion-icon>
-      <ion-label position="floating">Phone</ion-label>
-      <ion-input type="text" [(ngModel)]="annonce.phone"></ion-input>
-    </ion-item>
-
-    <ion-item lines="inset">
-      <ion-icon name="location-outline" slot="start"></ion-icon>
-      <ion-label position="floating">Address</ion-label>
-      <ion-input type="text" [(ngModel)]="annonce.adresse"></ion-input>
+    <ion-item>
+      <ion-icon class="ion-padding" name="location-outline"></ion-icon>
+      <ion-input  placeholder="Address" type="text" [(ngModel)]="annonce.adresse"></ion-input>
     </ion-item>
 
     <ion-item lines="inset">
@@ -60,5 +52,5 @@
     <ion-button expand="full" slot="start" (click)="addAnnonce(annonce)">
       Add Annonce
     </ion-button>
-  </ion-list>
+  </div>
 </ion-content>
