@@ -12,7 +12,7 @@
         <ion-card class="custom-card">
           <img class="card-image" [routerLink]="['/show-details-annonces', annonce.id]" [src]="annonce.image" />
           <ion-card-header>
-            <ion-card-title class="card-title"><ion-icon name="clipboard-outline"></ion-icon> {{ annonce.title }}</ion-card-title>
+            <ion-card-title class="card-title"><ion-icon name="clipboard-outline"></ion-icon> {{ annonce.title }} <ion-icon (click)="navigateToEditPage(annonce.id)" class="small-icon" name="create-outline"></ion-icon></ion-card-title>
             <ion-card-title class="card-title"><ion-icon name="person-circle-outline"></ion-icon> {{ annonce.user }}</ion-card-title>
             <ion-card-title class="card-title"><ion-icon name="card-outline"></ion-icon> {{ annonce.price }}</ion-card-title>
           </ion-card-header>
@@ -32,5 +32,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  
+
 </ion-content>

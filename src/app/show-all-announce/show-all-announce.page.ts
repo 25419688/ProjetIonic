@@ -22,8 +22,9 @@ export class ShowAllAnnouncePage implements OnInit {
     private alertController: AlertController,
     private menuController: MenuController,
     private cd: ChangeDetectorRef,
-  private alertCtrl: AlertController,
-  private modalCtrl: ModalController) {}
+  private router: Router
+    ) {}
+
 
 
   ngOnInit() {
@@ -42,6 +43,8 @@ export class ShowAllAnnouncePage implements OnInit {
       error: (err) => {
         console.log(err);
       },
+
+
     });
 
   }
@@ -70,6 +73,10 @@ export class ShowAllAnnouncePage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  navigateToEditPage(annonceId: string) {
+    this.router.navigate(['/edit-annonces', annonceId]);
   }
 
 
