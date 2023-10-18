@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
   },
   {
     path: '',
@@ -25,7 +26,15 @@ const routes: Routes = [
   },
   {
     path: 'add-annonce',
-    loadChildren: () => import('./add-annonce/add-annonce.module').then( m => m.AddAnnoncePageModule)
+    loadChildren: () => import('./add-annonce/add-annonce.module').then( m => m.AddAnnoncePageModule),
+    canActivate: [AuthGuard]
+
+  },
+  {
+    path: 'annonce-user',
+    loadChildren: () => import('./annonce-user/annonce-user.module').then( m => m.AnnonceUserPageModule),
+    canActivate: [AuthGuard]
+
   },
 
   {
@@ -40,7 +49,6 @@ const routes: Routes = [
     path: 'edit-annonces/:id',
     loadChildren: () => import('./edit-annonces/edit-annonces.module').then( m => m.EditAnnoncesPageModule)
   },
-
 ];
 
 

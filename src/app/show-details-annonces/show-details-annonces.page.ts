@@ -13,37 +13,23 @@ import { AnnonceService } from '../annonce-service.service';
 export class ShowDetailsAnnoncesPage implements OnInit {
   selectedAnnonces;
   constructor(
-    private activatedRoute: ActivatedRoute,
+    private route: ActivatedRoute,
     private annonceService: AnnonceService ,
     private router: Router
  ) { }
 
-  ngOnInit() {
+ ngOnInit() {
+ 
+  const annonceId = this.route.snapshot.paramMap.get('id');
 
-
-    // this.activatedRoute.paramMap.subscribe({
-    //   next: (p: ParamMap) => {
-    //     let id = p.get('id');
-
-    //     console.log(id);
-    //     this.selectedAnnonces = this.annonceService.getAnnoncesById(id);
-    //   },
-    // });
-    // this.activatedRoute.paramMap.subscribe({
-    //   next: (p: ParamMap) => {
-    //     let id = p.get('id');
-    //     if (id) {
-    //       // Si l'ID est passé en tant que paramètre, récupérez les détails de l'annonce
-    //       this.selectedAnnonces = this.annonceService.getAnnoncesById(id);
-    //     } else {
-    //       // Si aucun ID n'est passé, gérer le cas où l'ID est manquant
-    //       // Par exemple, rediriger l'utilisateur vers la page de liste des annonces
-    //       this.router.navigate(['/show-all-announce']);
-    //     }
-    //   },
-    // });
-
-
-  }
+  this.annonceService.getAnnonceById(annonceId).subscribe({
+    next: (response) => {
+      this.selectedAnnonces = { id: annonceId, ...response };
+    },
+    error: (err) => {
+      console.log(err);
+    },
+  });
+}
 
 }
