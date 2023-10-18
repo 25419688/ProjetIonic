@@ -67,24 +67,18 @@ export class UserService {
     }
 
     logout() {
-
-      this.afAuth.signOut().then(() => {
-        // Clear user-related data
-        this.userId = '';
-        this.token = '';
+      return this.afAuth.signOut().then(() => {
+        // Clear local storage or any other cleanup steps
         localStorage.removeItem('token');
-      }).catch((error) => {
-        console.error('Error while logging out', error);
+        this.token = null;
+        this.userId = null;
+  
+        
       });
     }
-
     getUserId(): string {
       return this.userId;
-    }
-
-    isUserLoggedIn(): boolean {
-      return !!this.afAuth.currentUser;
-    }
+    }    
 
     getToken(): string {
       return localStorage.getItem('token');
