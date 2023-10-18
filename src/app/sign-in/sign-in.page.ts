@@ -32,7 +32,6 @@ export class SignInPage implements OnInit {
       console.error('Email or password is empty');
     }
   }
-  
 
   ngOnInit() {
   }

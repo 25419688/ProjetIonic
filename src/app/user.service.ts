@@ -68,6 +68,14 @@ export class UserService {
 
     logout() {
 
+      this.afAuth.signOut().then(() => {
+        // Clear user-related data
+        this.userId = '';
+        this.token = '';
+        localStorage.removeItem('token');
+      }).catch((error) => {
+        console.error('Error while logging out', error);
+      });
     }
 
     getUserId(): string {
