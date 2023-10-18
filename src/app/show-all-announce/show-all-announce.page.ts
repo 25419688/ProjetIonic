@@ -22,9 +22,8 @@ export class ShowAllAnnouncePage implements OnInit {
     private alertController: AlertController,
     private menuController: MenuController,
     private cd: ChangeDetectorRef,
-
-    private alertCtrl: AlertController,
-    private modalCtrl: ModalController) {}
+  private router: Router
+    ) {}
 
 
 

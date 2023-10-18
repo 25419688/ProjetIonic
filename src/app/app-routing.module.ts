@@ -30,6 +30,12 @@ const routes: Routes = [
     canActivate: [AuthGuard]
 
   },
+  {
+    path: 'annonce-user',
+    loadChildren: () => import('./annonce-user/annonce-user.module').then( m => m.AnnonceUserPageModule),
+    canActivate: [AuthGuard]
+
+  },
 
   {
     path: 'sign-up',
@@ -38,6 +44,10 @@ const routes: Routes = [
   {
     path: 'sign-in',
     loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
+  },
+  {
+    path: 'edit-annonces/:id',
+    loadChildren: () => import('./edit-annonces/edit-annonces.module').then( m => m.EditAnnoncesPageModule)
   },
 ];
 

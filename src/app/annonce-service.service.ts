@@ -24,7 +24,7 @@ export class AnnonceService {
 
 
 
-  apiUrl = 'https://ionic-15b28-default-rtdb.firebaseio.com';
+  apiUrl = 'https://gestion-annonces-edf14-default-rtdb.firebaseio.com/';
 
   constructor(private http: HttpClient) {}
 
@@ -54,7 +54,7 @@ export class AnnonceService {
   }
   updateAnnonce(newAnnonce, idAnnonce) {
     return this.http.put(
-      ` https://gestionannonces-9bdd8-default-rtdb.firebaseio.com/annonces/${idAnnonce}.json`,
+      `${this.apiUrl}/annonces/${idAnnonce}.json`,
 
       newAnnonce
 
