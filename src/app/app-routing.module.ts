@@ -6,7 +6,6 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
-    canActivate: [AuthGuard]
   },
   {
     path: '',
@@ -27,7 +26,9 @@ const routes: Routes = [
   },
   {
     path: 'add-annonce',
-    loadChildren: () => import('./add-annonce/add-annonce.module').then( m => m.AddAnnoncePageModule)
+    loadChildren: () => import('./add-annonce/add-annonce.module').then( m => m.AddAnnoncePageModule),
+    canActivate: [AuthGuard]
+
   },
 
   {
@@ -37,7 +38,8 @@ const routes: Routes = [
   {
     path: 'sign-in',
     loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
-  },  {
+  },
+  {
     path: 'annonce-user',
     loadChildren: () => import('./annonce-user/annonce-user.module').then( m => m.AnnonceUserPageModule)
   },

@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor(private menuController: MenuController,private userService: UserService, private router: Router) {}
+  signInButton: any;
+  constructor(private menuController: MenuController,public userService: UserService, private router: Router) {}
   openMenu() {
     this.menuController.enable(true, 'menuId');
     this.menuController.open('menuId');
@@ -20,9 +20,10 @@ export class HomePage {
     this.menuController.close('menuId');
   }
 
+  navigateToSignIn() {
+    this.router.navigate(['/sign-in']);
+  }
   logout() {
     this.userService.logout();
-    // Redirect to the login page or any other desired page after logout
-    this.router.navigate(['/login']);
   }
 }
