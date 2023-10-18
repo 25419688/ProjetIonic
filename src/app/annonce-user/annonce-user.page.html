@@ -3,26 +3,21 @@
     <ion-buttons slot="start">
       <ion-back-button default-href="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center"> Annonces Client </ion-title>
+    <ion-title class="ion-text-center"> Annonce Client </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let i of annonces">
+    <ion-item *ngFor="let annonce of annonces">
       <ion-thumbnail slot="start">
-        <ion-img [src]="i.image"></ion-img>
+        <ion-img [src]="annonce.image" alt="Annonce Image"></ion-img>
       </ion-thumbnail>
       <ion-label>
-        <h2>{{ i.title }}</h2>
-        <p>{{ i.description }}</p>
-        <p>Prix: {{ i.price }} dt</p>
+        <h2>{{ annonce.title }}</h2>
+        <p>{{ annonce.description }}</p>
+        <p>Prix: {{ annonce.price }} dt</p>
       </ion-label>
-      <ion-buttons slot="end">
-        <ion-button (click)="presentAlert(i)">
-          <ion-icon name="trash"></ion-icon>
-        </ion-button>
-      </ion-buttons>
     </ion-item>
   </ion-list>
 </ion-content>
