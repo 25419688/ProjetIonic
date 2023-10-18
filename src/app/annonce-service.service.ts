@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { UserService } from './user.service';
 
 
 export interface Annonce {
- 
+
     id?: string;
     title: string;
     user: string;
@@ -20,30 +22,45 @@ export interface Annonce {
 })
 export class AnnonceService {
 
+
+
+  apiUrl = 'https://gestion-annonces-edf14-default-rtdb.firebaseio.com/';
+
   constructor(private http: HttpClient) {}
 
   getAllAnnonces(){
-    return this.http.get('https://gestionannonces-9bdd8-default-rtdb.firebaseio.com/annonces.json');
+
+    return this.http.get(`${this.apiUrl}/annonces.json`);
   }
 
+  getAnnonceById(id) {
+    return this.http.get(`${this.apiUrl}/annonces/${id}.json`);
+
+  }
+
+
   addAnnonce(newAnnonce) {
-    return this.http.post(
-      'https://gestionannonces-9bdd8-default-rtdb.firebaseio.com/annonces.json',
+
+    return this.http.post(`${this.apiUrl}/annonces.json`,
+
       newAnnonce
     );
   }
 
   deleteAnnonce(idAnnonce) {
     return this.http.delete(
-      'https://gestionannonces-9bdd8-default-rtdb.firebaseio.com/annonces/${idAnnonce}.json'
-    );
+
+      `${this.apiUrl}/annonces/${idAnnonce}.json`);
   }
   updateAnnonce(newAnnonce, idAnnonce) {
     return this.http.put(
-      ` https://gestionannonces-9bdd8-default-rtdb.firebaseio.com/annonces/${idAnnonce}.json`,
-    
+      `${this.apiUrl}/annonces/${idAnnonce}.json`,
+
       newAnnonce
+
     );
   }
-  
+
+
+
 }

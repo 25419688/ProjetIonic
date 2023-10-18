@@ -16,15 +16,15 @@ export class ShowAllAnnouncePage implements OnInit {
   liste: Annonce[];
   searchQuery: string = '';
   isSearchActive: boolean = false;
-  
+
   constructor(
-    private annonceService: AnnonceService, 
+    private annonceService: AnnonceService,
     private alertController: AlertController,
     private menuController: MenuController,
-    private router : Router ,
     private cd: ChangeDetectorRef,
-    private alertCtrl: AlertController, 
-    private modalCtrl: ModalController) {}
+  private router: Router
+    ) {}
+
 
 
   ngOnInit() {
@@ -44,7 +44,7 @@ export class ShowAllAnnouncePage implements OnInit {
         console.log(err);
       },
 
-      
+
     });
 
   }
@@ -60,7 +60,8 @@ export class ShowAllAnnouncePage implements OnInit {
           handler: () => {
             this.annonceService.deleteAnnonce(idAnnonce).subscribe({
               next: (response) => {
-                this.getAnnonces();
+                console.log(response);
+                this.getAnnonces;
               },
               error: (err) => {
                 console.log(err);
@@ -73,12 +74,12 @@ export class ShowAllAnnouncePage implements OnInit {
 
     await alert.present();
   }
- 
+
   navigateToEditPage(annonceId: string) {
     this.router.navigate(['/edit-annonces', annonceId]);
   }
 
- 
+
 
 
   openMenu() {
@@ -111,5 +112,5 @@ export class ShowAllAnnouncePage implements OnInit {
   );
 
   }
-  
+
 }
