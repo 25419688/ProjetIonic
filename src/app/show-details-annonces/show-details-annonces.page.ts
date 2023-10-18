@@ -16,8 +16,6 @@ export class ShowDetailsAnnoncesPage implements OnInit {
     private route: ActivatedRoute,
     private annonceService: AnnonceService ,
     private router: Router
-
-
  ) { }
 
  ngOnInit() {

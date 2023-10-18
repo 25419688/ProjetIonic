@@ -39,11 +39,6 @@ const routes: Routes = [
     path: 'sign-in',
     loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
   },
-  {
-    path: 'annonce-user',
-    loadChildren: () => import('./annonce-user/annonce-user.module').then( m => m.AnnonceUserPageModule)
-  },
-
 ];
 
 

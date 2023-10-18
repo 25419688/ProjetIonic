@@ -1,0 +1,41 @@
+<ion-content padding>
+  <ion-list *ngFor="let newAnnonce of allAnnonce">
+    <ion-item lines="inset">
+      <ion-label position="floating">Title</ion-label>
+      <ion-input type="text" [(ngModel)]="newAnnonce.title"></ion-input>
+    </ion-item>
+
+    <!-- Ajoutez des champs similaires pour les autres propriétés de l'annonce (user, phone, adresse, date, price, description, image) -->
+    <ion-item lines="inset">
+      <ion-label position="floating">User</ion-label>
+      <ion-input type="text" [(ngModel)]="newAnnonce.user" [readonly]="true"></ion-input>
+    </ion-item>
+    <ion-item lines="inset">
+      <ion-label position="floating">image</ion-label>
+      <ion-input type="text" [(ngModel)]="newAnnonce.image"></ion-input>
+    </ion-item>
+    <ion-item lines="inset">
+      <ion-label position="floating">Description</ion-label>
+      <ion-input type="text" [(ngModel)]="newAnnonce.description"></ion-input>
+    </ion-item>
+    <ion-item lines="inset">
+      <ion-label position="floating">Price</ion-label>
+      <ion-input type="text" [(ngModel)]="newAnnonce.price"></ion-input>
+    </ion-item>
+    <ion-item lines="inset">
+      <ion-label position="floating">Phone</ion-label>
+      <ion-input type="text" [(ngModel)]="newAnnonce.phone"></ion-input>
+    </ion-item>
+    <ion-item lines="inset">
+      <ion-label position="floating">Adresse</ion-label>
+      <ion-input type="text" [(ngModel)]="newAnnonce.adresse"></ion-input>
+    </ion-item>
+    <ion-item lines="inset">
+      <ion-label position="floating">Date</ion-label>
+      <ion-input type="text" [(ngModel)]="newAnnonce.date"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="updateAnnonce(newAnnonce,newAnnonce.id)">
+      Update Annonce
+    </ion-button>
+  </ion-list>
+</ion-content>

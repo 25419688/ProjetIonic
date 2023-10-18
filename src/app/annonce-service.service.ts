@@ -29,23 +29,35 @@ export class AnnonceService {
   constructor(private http: HttpClient) {}
 
   getAllAnnonces(){
+
     return this.http.get(`${this.apiUrl}/annonces.json`);
   }
 
   getAnnonceById(id) {
     return this.http.get(`${this.apiUrl}/annonces/${id}.json`);
+
   }
 
 
   addAnnonce(newAnnonce) {
+
     return this.http.post(`${this.apiUrl}/annonces.json`,
+
       newAnnonce
     );
   }
 
   deleteAnnonce(idAnnonce) {
     return this.http.delete(
-      `${this.apiUrl}/annonces/${idAnnonce}.json`
+
+      `${this.apiUrl}/annonces/${idAnnonce}.json`);
+  }
+  updateAnnonce(newAnnonce, idAnnonce) {
+    return this.http.put(
+      ` https://gestionannonces-9bdd8-default-rtdb.firebaseio.com/annonces/${idAnnonce}.json`,
+
+      newAnnonce
+
     );
   }
 
