@@ -35,7 +35,3 @@ export class AnnonceUserPage implements OnInit {
     });
   }
 }
-
-
-
-

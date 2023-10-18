@@ -20,26 +20,29 @@ export interface Annonce {
 })
 export class AnnonceService {
 
+  apiUrl = 'https://ionic-15b28-default-rtdb.firebaseio.com';
+
   constructor(private http: HttpClient) {}
 
   getAllAnnonces(){
-    return this.http.get('https://ionic-15b28-default-rtdb.firebaseio.com/annonces.json');
+    return this.http.get(`${this.apiUrl}/annonces.json`);
   }
 
   getAnnonceById(id) {
-    return this.http.get(`https://ionic-15b28-default-rtdb.firebaseio.com/annonces/${id}.json`);
+    return this.http.get(`${this.apiUrl}/annonces/${id}.json`);
   }
+
 
   addAnnonce(newAnnonce) {
     return this.http.post(
-      'https://ionic-15b28-default-rtdb.firebaseio.com/annonces.json',
+      `${this.apiUrl}/annonces.json`,
       newAnnonce
     );
   }
 
   deleteAnnonce(idAnnonce) {
     return this.http.delete(
-      `https://ionic-15b28-default-rtdb.firebaseio.com/annonces/${idAnnonce}.json`
+      `${this.apiUrl}/annonces/${idAnnonce}.json`
     );
   }
 

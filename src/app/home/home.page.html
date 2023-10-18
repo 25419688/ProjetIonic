@@ -7,6 +7,12 @@
         <ion-icon name="menu-outline" size="large"></ion-icon>
       </ion-button> 
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="userService.getToken()" (click)="logout()">Logout</ion-button>
+      <ion-button *ngIf="!userService.getToken()" (click)="navigateToSignIn()">
+        <ion-icon slot="icon-only" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
